@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enriched Data</title>
+    <meta http-equiv="refresh" content="120"> <!-- Refresh the page every 120 seconds -->
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Enriched Data</h1>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Original ID</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Timestamp</th>
+                    <th>Enriched Data</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in records %}
+                <tr>
+                    <td>{{ record.id }}</td>
+                    <td>{{ record.original_id }}</td>
+                    <td>{{ record.latitude }}</td>
+                    <td>{{ record.longitude }}</td>
+                    <td>{{ record.timestamp }}</td>
+                    <td>{{ record.enriched_data }}</td>
+                    <td>
+                        <a href="https://www.google.com/maps?q={{ record.latitude }},{{ record.longitude }}" target="_blank">
+                            View on Google Maps
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
