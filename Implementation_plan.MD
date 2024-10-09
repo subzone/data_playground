@@ -47,6 +47,12 @@
    - Develop logic to detect data gaps
    - Implement backfill process for missing data
 
+3.5. Retrieval-Augmented Generation (RAG)
+   - Set up a knowledge base with relevant information
+   - Implement a retrieval mechanism to fetch relevant documents
+   - Integrate the retrieval mechanism with the generation model
+   - Enhance the data enrichment process with contextually relevant information
+
 ## 4. Testing
 
 4.1. Unit Testing

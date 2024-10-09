@@ -15,5 +15,5 @@ pip install --upgrade pip
 # Install the requirements
 pip install -r requirements.txt
 
-# Run the application
-python app.py
+# Run the grabber
+python poc_implementation.py

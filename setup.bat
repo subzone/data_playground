@@ -12,5 +12,5 @@ python -m pip install --upgrade pip
 REM Install the requirements
 pip install -r requirements.txt
 
-REM Run the application
-python app.py
+REM Run the data grabber
+python poc_implementation.py
